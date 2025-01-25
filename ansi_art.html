@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ANSI Art Generator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #36393F;
+            text-align: center;
+            color: #FFF
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+        }
+        .palette-container {
+            margin-bottom: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .palette {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            margin: 2px;
+            border: 1px solid #000;
+            cursor: pointer;
+            text-align: center;
+            line-height: 35px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            border-radius: 3px;
+        }
+        .matrix {
+            display: grid;
+            grid-template-columns: repeat(13, 30px);
+            grid-gap: 2px; 
+        }
+        .matrix button {
+            width: 30px;
+            height: 30px;
+            border: 0px;
+            cursor: pointer;
+            background-color: #1e1f22;
+        }
+        .copy-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4f545c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .copy-button.copied {
+            background-color: #3ba55d;
+        }
+    </style>
+</head>
+<body>
+    <h1>Arcii's Discord 
+        <span style="color:#5865F2">Colored</span> 
+        ANSI Art Generator
+    </h1>
+    <div class="container">
+        <h3>About</h3>
+        <p>This is a simple app that creates colored Discord art using the ANSI color codes available on the latest Discord desktop versions.</p>
+        <p>To use this, select color, choose boxes, then copy it using the button below, and send in a Discord message.</p>
+        <h3>Source Code</h3>
+        <p>This was made with reference to <a href="https://rebane2001.com/discord-colored-text-generator/">Rebane</a>'s design</p>
+    </div>
+
+    <div class="palette-container">
+        <div id="palette1" class="palette" style="background-color: #4f545c;" data-color="30"></div>
+        <div id="palette2" class="palette" style="background-color: #dc322f;" data-color="31"></div>
+        <div id="palette3" class="palette" style="background-color: #859900;" data-color="32"></div>
+        <div id="palette4" class="palette" style="background-color: #b58900;" data-color="33"></div>
+        <div id="palette5" class="palette" style="background-color: #268bd2;" data-color="34"></div>
+        <div id="palette6" class="palette" style="background-color: #d33682;" data-color="35"></div>
+        <div id="palette7" class="palette" style="background-color: #2aa198;" data-color="36"></div>
+        <div id="palette8" class="palette" style="background-color: #ffffff;" data-color="37"></div>
+        <div class="palette" style="background-color: #1e1f22; border: 1px solid white;" id="cancel" data-color="00"></div>
+    </div>
+
+    <div class="matrix">
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+    </div>
+    <button class="copy-button" id="copy">Copy art as Discort formatted</button>
+
+    <br>
+    <br>
+    <small>This is an unofficial tool, it is not made or endorsed by Discord.</small>
+    
+    <script>
+        let selectedColor = null;
+        let selectedColorCode = "00";
+
+        // Add event listeners to palettes
+        const palettes = document.querySelectorAll('.palette');
+        palettes.forEach(palette => {
+            palette.addEventListener('click', () => {
+                // Deselect all palettes
+                palettes.forEach(p => p.style.border = '2px solid #000');
+
+                // Select the clicked palette
+                selectedColor = palette.style.backgroundColor;
+                selectedColorCode = palette.getAttribute('data-color');
+                palette.style.border = '1px solid #fff';
+            });
+        });
+
+        // Add event listeners to matrix buttons
+        const buttons = document.querySelectorAll('.matrix button');
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                button.style.backgroundColor = selectedColor || '#1e1f22';
+                button.setAttribute('data-color', selectedColorCode);
+            });
+        });
+
+        // Copy button functionality
+        const copyButton = document.getElementById('copy');
+        copyButton.addEventListener('click', () => {
+            let matrixData = [];
+            buttons.forEach(button => {
+                const colorCode = button.getAttribute('data-color') || "00";
+                matrixData.push(colorCode);
+            });
+
+            // Format as 3x3 matrix string
+            let matrixString = "";
+            matrixString += "```ansi\n"
+            for (let i = 0; i < matrixData.length; i++) {
+                if(matrixData[i] == "00") matrixString += "  "
+                else matrixString += "\x1b[0;" + matrixData[i] + "m██\x1b[0m";
+                matrixString[-1] = ""
+                if ((i + 1) % 13 === 0) matrixString += "\n";
+            }
+            matrixString += "```"
+
+
+            // Copy to clipboard
+            navigator.clipboard.writeText(matrixString.trim())
+                .then(() => {
+                    copyButton.textContent = "Copied!";
+                    copyButton.classList.add('copied');
+
+                    setTimeout(() => {
+                        copyButton.textContent = "Copy art as Discort formatted";
+                        copyButton.classList.remove('copied');
+                    }, 2000);
+                })
+                .catch(err => alert("Failed to copy matrix: " + err));
+        });
+    </script>
+</body>
+</html>
