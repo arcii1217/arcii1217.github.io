@@ -280,7 +280,7 @@
         palettes.forEach(palette => {
             palette.addEventListener('click', () => {
                 // Deselect all palettes
-                palettes.forEach(p => p.style.border = '2px solid #000');
+                palettes.forEach(p => p.style.border = '1px solid #000');
 
                 // Select the clicked palette
                 selectedColor = palette.style.backgroundColor;
