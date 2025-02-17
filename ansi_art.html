@@ -15,6 +15,7 @@
             text-align: center;
             color: #FFF
         }
+
         .container {
             max-width: 500px;
             margin: auto;
@@ -25,7 +26,6 @@
             flex-wrap: wrap;
             justify-content: center;
         }
-
         .palette {
             display: inline-block;
             width: 35px;
@@ -40,6 +40,7 @@
             color: white;
             border-radius: 3px;
         }
+
         .matrix {
             display: grid;
             grid-template-columns: repeat(13, 30px);
@@ -52,6 +53,28 @@
             cursor: pointer;
             background-color: #1e1f22;
         }
+
+        .example-container {
+            margin-bottom: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .example-button {
+            display: inline-block;
+            margin: 5px;
+            margin-top: 5px;
+            margin-bottom: -20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4f545c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
         .copy-button {
             margin-top: 20px;
             padding: 10px 20px;
@@ -93,6 +116,12 @@
         <div id="palette8" class="palette" style="background-color: #ffffff;" data-color="37"></div>
         <div class="palette" style="background-color: #1e1f22; border: 1px solid white;" id="cancel" data-color="00"></div>
     </div>
+
+    <div class="example-container">
+    <button class="example-button" onclick="loadExample1()">Example 1</button>
+    <button class="example-button" onclick="loadExample2()">Example 2</button>
+    </div>
+    <br>
 
     <div class="matrix">
         <button></button>
@@ -265,6 +294,7 @@
         <button></button>
         <button></button>
     </div>
+
     <button class="copy-button" id="copy">Copy art as Discord formatted</button>
 
     <br>
@@ -297,6 +327,48 @@
                 button.setAttribute('data-color', selectedColorCode);
             });
         });
+
+        function loadExample1() {
+            const colors = ["00", "00", "00", "00", "00", "00", "36", "36", "00", "00", "00", "00", "00", 
+                            "00", "00", "00", "00", "00", "31", "31", "31", "00", "00", "00", "00", "00", 
+                            "00", "30", "30", "00", "00", "31", "31", "31", "00", "00", "30", "30", "00", 
+                            "30", "37", "37", "30", "30", "31", "31", "31", "30", "30", "37", "37", "30", 
+                            "30", "37", "30", "37", "37", "37", "37", "37", "37", "37", "30", "37", "30", 
+                            "00", "30", "37", "37", "37", "37", "37", "37", "37", "37", "37", "30", "00", 
+                            "30", "37", "37", "37", "30", "37", "37", "30", "37", "37", "37", "37", "30", 
+                            "30", "37", "37", "37", "37", "30", "30", "37", "37", "37", "37", "37", "30", 
+                            "30", "37", "37", "30", "37", "37", "37", "30", "37", "37", "37", "37", "30", 
+                            "30", "37", "37", "30", "37", "37", "37", "30", "37", "37", "37", "37", "30", 
+                            "30", "37", "37", "37", "30", "30", "30", "37", "37", "37", "37", "37", "30", 
+                            "30", "37", "37", "37", "37", "37", "37", "37", "37", "37", "37", "37", "30", 
+                            "30", "37", "37", "37", "37", "37", "37", "37", "37", "37", "37", "37", "30"];
+            buttons.forEach((button, index) => {
+                const colorCode = colors[index];
+                button.style.backgroundColor = document.querySelector(`[data-color='${colorCode}']`).style.backgroundColor;
+                button.setAttribute('data-color', colorCode);
+            });
+        }
+
+        function loadExample2() {
+            const colors = ["37", "37", "37", "00", "00", "30", "30", "30", "00", "37", "37", "37", "00",
+                            "37", "32", "37", "37", "33", "33", "33", "33", "37", "37", "32", "37", "00",
+                            "37", "33", "33", "33", "33", "32", "33", "33", "33", "33", "32", "37", "00",
+                            "37", "33", "33", "33", "33", "37", "33", "33", "33", "33", "33", "37", "30",
+                            "33", "33", "33", "31", "33", "37", "31", "33", "33", "33", "33", "30", "30",
+                            "32", "33", "37", "33", "33", "33", "33", "37", "33", "32", "33", "30", "30",
+                            "37", "33", "00", "00", "37", "37", "00", "00", "33", "37", "33", "30", "30",
+                            "37", "33", "37", "32", "37", "37", "37", "32", "33", "37", "33", "30", "30",
+                            "33", "33", "35", "35", "37", "37", "35", "35", "33", "33", "33", "30", "30",
+                            "30", "33", "33", "37", "37", "37", "37", "37", "33", "33", "30", "30", "30",
+                            "00", "33", "33", "30", "30", "33", "33", "30", "33", "30", "30", "30", "30",
+                            "00", "00", "33", "30", "37", "30", "37", "30", "33", "30", "30", "00", "00",
+                            "00", "30", "30", "30", "30", "37", "30", "30", "30", "30", "30", "30", "00"];
+            buttons.forEach((button, index) => {
+                const colorCode = colors[index];
+                button.style.backgroundColor = document.querySelector(`[data-color='${colorCode}']`).style.backgroundColor;
+                button.setAttribute('data-color', colorCode);
+            });
+        }
 
         // Copy button functionality
         const copyButton = document.getElementById('copy');
